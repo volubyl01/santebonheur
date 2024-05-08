@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification{% endblock %}
+
+{% block body %}
+<div class="container-sm w-50 bg-warning text-dark mt-5">
+    <h1 class="text-center p-5">Modifier un produit</h1>
+    {{ include('product/_form.html.twig', {'button_label': 'Mettre à jour'}) }} 
+ <div class="d-flex">   
+    <a href="{{ path('app_product_index') }}"><button type="button" class="btn btn-info mr-3 mt-3">Retour à la liste</button></a>
+
+    {{ include('product/_delete_form.html.twig') }}
+</div>
+  </div>
+{% endblock %}

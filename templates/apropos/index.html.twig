@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}A propos!{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+
+    <div>
+        <h2 class="text-success text-center mt-5 xlarge-font"><b>Nos trois univers</b></h2>
+        <div class="d-flex justify-content-center text-center mt-3">
+            <p class="col-md-3">Découvrir les produits Santé & Bonheur, c'est découvrir les 3 grands univers qui constituent l'essence de Santé & Bonheur
+            </p>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="column-66">
+            <h3 class="mb-5"><b class="text-danger">Bien-être</b></h3>
+            <p><li><b>Des huiles essentielles :</b> tout le pouvoir des huiles essentielles est ici. Découvrez notre sélection des petits producteurs d'huile de haute qualité, biologiques et sauvages, pour vous permettre de prendre soin de vous.</li></p>
+            <p><li><b>Nutrition :</b> agissez efficacement sur vos déséquilibres, inconfort, comblez les manques du corps et réparez votre sommeil... Découvrez notre sélection de superaliments ou de compléments alimentaires pour agir là ou ça commence : à l'intérieur.</li></p>
+          </div>
+          <div class="column-33">
+              <img src="{{ asset('img/bienEtre.png') }}" width="335" height="471">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="column-33">
+            <img src="{{ asset('img/beaute.png') }}" alt="produit" width="335" height="471">
+          </div>
+          <div class="column-66">
+            <h3 class="mb-5"><b class="text-danger">Beauté</b></h3>
+            <p><li><b>Les bases personnalisables : </b> il suffit parfois de quelques gouttes... Choisissez la base de votre choix, ajoutez-y l'actif qui répond à vos besoins et profitez d'un soin boosté fait juste pour vous</li></p>
+            <p><li><b>Les cosmétiques maison : </b>  parce que nous sommes tous différents, nos soins devraient l'être aussi. A nos côtés, créez votre soin 100% unique, personnalisé et économique en associant le meilleur de nature et de ses actifs à une texture</li></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+            <div class="column-66">
+                <h3 class="mb-5"><b class="text-danger">Qualité</b></h3>
+                <p><li><b>Une équipe de chercheurs :</b> tous nos ingrédients sont évalués selon plusieurs critères : origine, composition, mode d’obtention, activité… Notre équipe Recherche & Développement partage son savoir-faire via les fiches techniques de nos produits et via nos dossiers thématiques, avec pour but de toujours mieux vous informer sur les produits et leur utilisation. </li></p>
+                <p><li><b>Un service Qualité à la pointe de l'exigence :</b>  L’équipe réalise des tests microbiologiques, physicochimiques, organoleptiques et s’appuie aussi sur les résultats de laboratoires accrédités. Tous les lots d’huiles essentielles et végétales sont contrôlés grâce à une chromatographie phase gaz permettant d’en garantir l’authenticité et d’en vérifier leurs particularités. Toute l’équipe Qualité se tient également à votre écoute pour vous répondre et vous renseigner sur la qualité de vos produits</li></p>
+              </div>
+          <div class="column-33">
+              <img src="{{ asset('img/qualite.png') }}" width="335" height="471" >
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

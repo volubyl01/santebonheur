@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Santé et Bonheur{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5 mb-5">
+
+    <div class="card text-dark" >
+        <img class="card-img" src="{{asset('img/homeimg.jpg')}}" alt="Card image">
+        <div class="card-img-overlay mt-5">
+            <div class="mt-5 h-5"><h1>Bienvenue sur Santé et Bonheur : </h1>
+                <h2 class="card-title mt-5 mb-3">La beauté au naturel</h2>
+                <div class="col-md-5">
+                    <p class="card-text mb-3">Découvrez nos sélections de produits pour répondre à vos préoccupations de santé et de bien-être !
+                    Préservez votre bien-être et soulagez les maux du quotidien avec les huiles essentielles et les synergies naturelles d'aromathérapie prodiguées par nos experts et nos partenaires diplômés.</p>
+
+
+                    <div class="col">
+                        <p class="card-text mb-3">Découvrez notre sélection rigoureuse de produits biologiques pour sublimer votre beauté et bien-être. Explorez nos conseils et informations dédiés à l'aromathérapie et à la cosmétique maison. Rejoignez notre communauté engagée pour un mode de vie sain et offrez-vous l'excellence de la nature avec Santé et Bonheur</p>
+                        <li class="list-unstyled "><a href="{{path('app_product_index')}}" class="btn btn-primary">Je découvre !</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

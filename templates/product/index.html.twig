@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block body %}
+
+<div class="bg-warning text-dark container w-75 mt-5">
+    <h1 class="text-center pt-5 text-primary">Tableau de bord</h1>
+<div class="col-md-12 text-center">
+    {% if is_granted('ROLE_USER') %}
+        <button class="btn btn-danger mt-5 mb-5"><a style="text-decoration:none" href="{{ path('app_product_new') }}"><h5 class="text-center text-light">Créer un nouveau produit</h5></a></button>
+    {% endif %}
+</div>
+    <table class="table table-responsive table-hover ">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+               
+                <th scope="col">Categorie</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Origine</th>
+                <th scope="col">Description</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr class="table-primary align-middle" scope="row">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                
+                <td>{{ product.category }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.origin }}</td>
+                <td><textarea">{{ product.description }}</textarea></td>
+
+
+                <td class="text-center">
+                <button class="btn btn-warning mr-5">
+                    <a class="text-light" href="{{ path('app_product_show', {'id': product.id}) }}">Voir</a>
+                </button>
+                
+                    {% if is_granted('ROLE_USER') %}
+                        <button class="btn btn-info mr-5"><a class="text-light" href="{{ path('app_product_edit', {'id': product.id}) }}">Modifier</a></button>
+                    {% endif %}
+                
+                  
+                   {% if is_granted('ROLE_USER') %}
+                        <button class="btn btn-danger mr-5"><a class="text-light" href="{{ path('app_product_delete', {'id': product.id}) }}">Supprimer</a> </button>
+                    {% endif %}
+                   
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">Produit inconnu</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+   
+
+{% endblock %}

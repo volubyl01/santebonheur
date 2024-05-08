@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Santé et Bonheur{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/santeBonheurLogo.png') }}">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/journal/bootstrap.rtl.min.css" integrity="sha512-URM2jwd7pTq8i1z4QCfUqSOO1Z5yZf5uDeEgFDXxIEcAuLCiinv+exyEtMIkWQKTzZArxJIKAlIVOeZzsYPR/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+    {% include "partials/_nav.html.twig" %}
+        {% block body %}{% endblock %}
+    {% include "partials/_footer.html.twig" %}
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+
+    <div class="d-flex flex-row-reverse">
+        <a  class="btn btn-secondary mb-3 mt-3" href="{{ path('app_user_index') }}">Retour à la liste</a>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">
+            <h2>Modifier utilisateur</h2>
+        </div>
+    </div>
+    {{ include('user/_form.html.twig', {'button_label': 'Modifier'}) }}
+    <div class="d-flex flex-row-reverse mt-5">
+        {{ include('user/_delete_form.html.twig') }}
+    </div>
+
+
+
+
+</div>
+{% endblock %}

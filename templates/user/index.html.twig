@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <div class="container mt-5 ms-auto">
+        <div class="table-responsive">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h2>Gestion des utilisateurs</h2>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th>Id</th>
+                        <th>Email</th>
+                        <th>Roles</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <tr class="text-center">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                        <td>
+                            <a class='btn btn-primary ms-2 mb-2' href="{{ path('app_user_show', {'id': user.id}) }}">Voir</a>
+                            <a class='btn btn-primary ms-2 mb-2' href="{{ path('app_user_edit', {'id': user.id}) }}">Modifier</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

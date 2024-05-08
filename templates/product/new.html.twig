@@ -1,0 +1,14 @@
+    {% extends 'base.html.twig' %}
+
+{% block title %}New Product{% endblock %}
+
+{% block body %}
+   <div class="container-sm w-50 bg-warning text-dark mt-5">
+    <h1 class="text-center">Créer un produit</h1>
+   
+    {{ include('product/_form.html.twig') }}
+    </div>
+   
+    <a class="text-center" href="{{ path('app_product_index') }}">Retour à la liste</a>
+  
+{% endblock %}
